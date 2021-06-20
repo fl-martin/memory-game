@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import CardsDisplay from "./components/CardsDisplay";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [score, setScore] = useState(0);
+	const [bestScore, setBestScore] = useState(0);
+	const [clickedCardsID, setClickedCardsID] = [];
+
+	function checkID(e) {
+		const newCardID = e.target.id;
+		if (clickedCardsID.includes(newCardID)) {
+			checkBestScore();
+			resetGame();
+		} else {
+			addPoint();
+			addID(newCardID);
+		}
+	}
+
+	function addPoint() {
+		setScore((score) => score++);
+	}
+
+	function addID(newCardID) {
+		setClickedCardsID((setClickedCardsID) => [
+			...setClickedCardsID,
+			newCardID,
+		]);
+	}
+
+	function checkBestScore() {
+		if (score > bestScore) {
+			setBestScore(score);
+		}
+	}
+
+	function resetGame() {
+		setScore(0);
+		setClickedCardsID([]);
+	}
+
+	return (
+		<div>
+			<h1>Memory Game</h1>
+			<p>
+				Get points by clicking on an image but don't click on any more
+				than once!
+			</p>
+			<div>
+				<h2>Score: {score}</h2>
+				<h2>Best Score: {bestScore}</h2>
+			</div>
+			<CardsDisplay checkID={checkID}></CardsDisplay>
+		</div>
+	);
 }
 
 export default App;
