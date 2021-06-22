@@ -1,5 +1,5 @@
 //use effect genera cambio de orden display
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../css/Cards.css";
 import image1 from "../images/GRADI3NTS-01.png";
 import image2 from "../images/GRADI3NTS-02.png";
@@ -14,36 +14,48 @@ import image10 from "../images/GRADI3NTS-10.png";
 import image11 from "../images/GRADI3NTS-11.png";
 import image12 from "../images/GRADI3NTS-12.png";
 
-const cardsArray = [
-	image1,
-	image2,
-	image3,
-	image4,
-	image5,
-	image6,
-	image7,
-	image8,
-	image9,
-	image10,
-	image11,
-	image12,
-];
-
 function CardsDisplay(props) {
+	const [cardsArray, setCardsArray] = useState([
+		image1,
+		image2,
+		image3,
+		image4,
+		image5,
+		image6,
+		image7,
+		image8,
+		image9,
+		image10,
+		image11,
+		image12,
+	]);
+
+	useEffect(
+		() => setCardsArray(shuffleArray(cardsArray)),
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		[props.score]
+	);
+
+	function shuffleArray(array) {
+		for (let i = array.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[array[i], array[j]] = [array[j], array[i]];
+		}
+		return array;
+	}
+
 	const cardsElements = cardsArray.map((card, index) => {
 		return (
 			<img
 				src={card}
 				alt="card"
-				id={index}
+				id={card}
 				key={index}
 				className="card"
 				onClick={props.checkID}
 			></img>
 		);
 	});
-
-	//	useEffect();
 
 	return <div className="cardsContainer">{cardsElements}</div>;
 }
