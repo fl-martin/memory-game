@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CardsDisplay from "./components/CardsDisplay";
 
 function App() {
 	const [score, setScore] = useState(0);
 	const [bestScore, setBestScore] = useState(0);
-	const [clickedCardsID, setClickedCardsID] = [];
+	const [clickedCardsID, setClickedCardsID] = useState([]);
 
 	function checkID(e) {
 		const newCardID = e.target.id;
@@ -18,7 +18,7 @@ function App() {
 	}
 
 	function addPoint() {
-		setScore((score) => score++);
+		setScore((score) => score + 1);
 	}
 
 	function addID(newCardID) {

@@ -1,0 +1,14 @@
+.cardsContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	width: 85%;
+	justify-items: center;
+	align-items: center;
+	margin: auto;
+	gap: 2em;
+}
+
+.card {
+	width: 80%;
+}
