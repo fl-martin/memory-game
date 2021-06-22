@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.60463a64.chunk.css",
+    "main.js": "/static/js/main.557373cd.chunk.js",
+    "main.js.map": "/static/js/main.557373cd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9fe43edf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9fe43edf.js.map",
+    "static/js/2.0da26708.chunk.js": "/static/js/2.0da26708.chunk.js",
+    "static/js/2.0da26708.chunk.js.map": "/static/js/2.0da26708.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.60463a64.chunk.css.map": "/static/css/main.60463a64.chunk.css.map",
+    "static/js/2.0da26708.chunk.js.LICENSE.txt": "/static/js/2.0da26708.chunk.js.LICENSE.txt",
+    "static/media/GRADI3NTS-01.0baa1e21.png": "/static/media/GRADI3NTS-01.0baa1e21.png",
+    "static/media/GRADI3NTS-02.d20bd602.png": "/static/media/GRADI3NTS-02.d20bd602.png",
+    "static/media/GRADI3NTS-03.fad48b50.png": "/static/media/GRADI3NTS-03.fad48b50.png",
+    "static/media/GRADI3NTS-04.cb79992d.png": "/static/media/GRADI3NTS-04.cb79992d.png",
+    "static/media/GRADI3NTS-05.b9589454.png": "/static/media/GRADI3NTS-05.b9589454.png",
+    "static/media/GRADI3NTS-06.1ca1f4f6.png": "/static/media/GRADI3NTS-06.1ca1f4f6.png",
+    "static/media/GRADI3NTS-07.a9d79b5f.png": "/static/media/GRADI3NTS-07.a9d79b5f.png",
+    "static/media/GRADI3NTS-08.79ed6fc2.png": "/static/media/GRADI3NTS-08.79ed6fc2.png",
+    "static/media/GRADI3NTS-09.c2b95db8.png": "/static/media/GRADI3NTS-09.c2b95db8.png",
+    "static/media/GRADI3NTS-10.50bbb2bc.png": "/static/media/GRADI3NTS-10.50bbb2bc.png",
+    "static/media/GRADI3NTS-11.bb3d0a93.png": "/static/media/GRADI3NTS-11.bb3d0a93.png",
+    "static/media/GRADI3NTS-12.bc33cdf2.png": "/static/media/GRADI3NTS-12.bc33cdf2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9fe43edf.js",
+    "static/js/2.0da26708.chunk.js",
+    "static/css/main.60463a64.chunk.css",
+    "static/js/main.557373cd.chunk.js"
+  ]
+}
