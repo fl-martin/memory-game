@@ -41,16 +41,19 @@ function App() {
 
 	return (
 		<div>
-			<h1>Memory Game</h1>
-			<p>
+			<header>Memory Game</header>
+			<p className="instructions">
 				Get points by clicking on an image but don't click on any more
 				than once!
 			</p>
-			<div>
-				<h2>Score: {score}</h2>
-				<h2>Best Score: {bestScore}</h2>
+			<div className="scores">
+				<h2 className="counter">Score: {score}</h2>
+				<h2 className="counter">Best Score: {bestScore}</h2>
 			</div>
 			<CardsDisplay checkID={checkID} score={score}></CardsDisplay>
+			<footer>
+				Made by <a href="https://github.com/fl-martin">fl-martin</a>
+			</footer>
 		</div>
 	);
 }

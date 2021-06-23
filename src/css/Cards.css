@@ -1,16 +1,63 @@
+html {
+	background-color: #938de4;
+}
+
+body {
+	margin: 0;
+	background-color: #fffbc7;
+	font-family: "Karla", sans-serif;
+}
+
+header {
+	font-size: 2.5em;
+	padding: 0.6em;
+	background-color: #938de4;
+	color: #fffbc7;
+}
+
+.instructions {
+	text-align: center;
+	font-size: 1.2em;
+	margin-top: 1.4em;
+}
+
+.scores {
+	margin: auto;
+	justify-content: center;
+	gap: 2em;
+	display: flex;
+	width: 80%;
+}
+
+.counter {
+	width: 15%;
+	transition: 2s;
+}
+
 .cardsContainer {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
-	width: 85%;
+	width: 80%;
 	justify-items: center;
 	align-items: center;
 	margin: auto;
-	gap: 2em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	gap: 1.5em;
 }
 
 .card {
-	width: 80%;
+	width: 75%;
 	border: 5px double #b0b0b0;
 	border-radius: 26px 0px 26px 0px;
+	transition: 1s;
+}
+
+footer {
+	font-size: 0.9em;
+	background-color: #938de4;
+	text-align: center;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
 }

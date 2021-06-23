@@ -31,7 +31,11 @@ function CardsDisplay(props) {
 	]);
 
 	useEffect(
-		() => setCardsArray(shuffleArray(cardsArray)),
+		() => {
+			setCardsArray(shuffleArray(cardsArray));
+			const cards = document.querySelectorAll("img");
+			console.log(cards);
+		},
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[props.score]
 	);
